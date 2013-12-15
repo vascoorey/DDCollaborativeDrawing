@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC4DA645185E560A00B1DD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA644185E560A00B1DD79 /* Foundation.framework */; };
+		BC4DA647185E560A00B1DD79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA646185E560A00B1DD79 /* CoreGraphics.framework */; };
+		BC4DA649185E560A00B1DD79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA648185E560A00B1DD79 /* UIKit.framework */; };
+		BC4DA64B185E560A00B1DD79 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA64A185E560A00B1DD79 /* SpriteKit.framework */; };
+		BC4DA651185E560A00B1DD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA64F185E560A00B1DD79 /* InfoPlist.strings */; };
+		BC4DA653185E560A00B1DD79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA652185E560A00B1DD79 /* main.m */; };
+		BC4DA657185E560A00B1DD79 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */; };
+		BC4DA65A185E560A00B1DD79 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA658185E560A00B1DD79 /* Main_iPhone.storyboard */; };
+		BC4DA65D185E560A00B1DD79 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA65B185E560A00B1DD79 /* Main_iPad.storyboard */; };
+		BC4DA660185E560A00B1DD79 /* DDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA65F185E560A00B1DD79 /* DDViewController.m */; };
+		BC4DA663185E560A00B1DD79 /* DDMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA662185E560A00B1DD79 /* DDMyScene.m */; };
+		BC4DA665185E560A00B1DD79 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA664185E560A00B1DD79 /* Spaceship.png */; };
+		BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA666185E560A00B1DD79 /* Images.xcassets */; };
+		BC4DA66E185E560A00B1DD79 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA66D185E560A00B1DD79 /* XCTest.framework */; };
+		BC4DA66F185E560A00B1DD79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA644185E560A00B1DD79 /* Foundation.framework */; };
+		BC4DA670185E560A00B1DD79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA648185E560A00B1DD79 /* UIKit.framework */; };
+		BC4DA678185E560A00B1DD79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA676185E560A00B1DD79 /* InfoPlist.strings */; };
+		BC4DA67A185E560A00B1DD79 /* DDCollaborativeDrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA679185E560A00B1DD79 /* DDCollaborativeDrawingTests.m */; };
+		BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */; };
+		BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC4DA671185E560A00B1DD79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC4DA639185E560A00B1DD79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC4DA640185E560A00B1DD79;
+			remoteInfo = DDCollaborativeDrawing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDCollaborativeDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4DA644185E560A00B1DD79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BC4DA646185E560A00B1DD79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BC4DA648185E560A00B1DD79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BC4DA64A185E560A00B1DD79 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		BC4DA64E185E560A00B1DD79 /* DDCollaborativeDrawing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawing-Info.plist"; sourceTree = "<group>"; };
+		BC4DA650185E560A00B1DD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC4DA652185E560A00B1DD79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC4DA654185E560A00B1DD79 /* DDCollaborativeDrawing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDCollaborativeDrawing-Prefix.pch"; sourceTree = "<group>"; };
+		BC4DA655185E560A00B1DD79 /* DDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
+		BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
+		BC4DA659185E560A00B1DD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BC4DA65C185E560A00B1DD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BC4DA65E185E560A00B1DD79 /* DDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDViewController.h; sourceTree = "<group>"; };
+		BC4DA65F185E560A00B1DD79 /* DDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDViewController.m; sourceTree = "<group>"; };
+		BC4DA661185E560A00B1DD79 /* DDMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMyScene.h; sourceTree = "<group>"; };
+		BC4DA662185E560A00B1DD79 /* DDMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMyScene.m; sourceTree = "<group>"; };
+		BC4DA664185E560A00B1DD79 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		BC4DA666185E560A00B1DD79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BC4DA66C185E560A00B1DD79 /* DDCollaborativeDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDCollaborativeDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4DA66D185E560A00B1DD79 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BC4DA675185E560A00B1DD79 /* DDCollaborativeDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawingTests-Info.plist"; sourceTree = "<group>"; };
+		BC4DA677185E560A00B1DD79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC4DA679185E560A00B1DD79 /* DDCollaborativeDrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCollaborativeDrawingTests.m; sourceTree = "<group>"; };
+		BC4DA683185E564500B1DD79 /* DDCollaborativeDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingViewController.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.h; sourceTree = "<group>"; };
+		BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingViewController.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.m; sourceTree = "<group>"; };
+		BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingSession.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.h; sourceTree = "<group>"; };
+		BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingSession.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC4DA63E185E560A00B1DD79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA647185E560A00B1DD79 /* CoreGraphics.framework in Frameworks */,
+				BC4DA649185E560A00B1DD79 /* UIKit.framework in Frameworks */,
+				BC4DA64B185E560A00B1DD79 /* SpriteKit.framework in Frameworks */,
+				BC4DA645185E560A00B1DD79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4DA669185E560A00B1DD79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA66E185E560A00B1DD79 /* XCTest.framework in Frameworks */,
+				BC4DA670185E560A00B1DD79 /* UIKit.framework in Frameworks */,
+				BC4DA66F185E560A00B1DD79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC4DA638185E560A00B1DD79 = {
+			isa = PBXGroup;
+			children = (
+				BC4DA686185E565400B1DD79 /* DDCollaborativeDrawing */,
+				BC4DA64C185E560A00B1DD79 /* Example */,
+				BC4DA673185E560A00B1DD79 /* DDCollaborativeDrawingTests */,
+				BC4DA643185E560A00B1DD79 /* Frameworks */,
+				BC4DA642185E560A00B1DD79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC4DA642185E560A00B1DD79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */,
+				BC4DA66C185E560A00B1DD79 /* DDCollaborativeDrawingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC4DA643185E560A00B1DD79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA644185E560A00B1DD79 /* Foundation.framework */,
+				BC4DA646185E560A00B1DD79 /* CoreGraphics.framework */,
+				BC4DA648185E560A00B1DD79 /* UIKit.framework */,
+				BC4DA64A185E560A00B1DD79 /* SpriteKit.framework */,
+				BC4DA66D185E560A00B1DD79 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC4DA64C185E560A00B1DD79 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA655185E560A00B1DD79 /* DDAppDelegate.h */,
+				BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */,
+				BC4DA658185E560A00B1DD79 /* Main_iPhone.storyboard */,
+				BC4DA65B185E560A00B1DD79 /* Main_iPad.storyboard */,
+				BC4DA65E185E560A00B1DD79 /* DDViewController.h */,
+				BC4DA65F185E560A00B1DD79 /* DDViewController.m */,
+				BC4DA661185E560A00B1DD79 /* DDMyScene.h */,
+				BC4DA662185E560A00B1DD79 /* DDMyScene.m */,
+				BC4DA664185E560A00B1DD79 /* Spaceship.png */,
+				BC4DA666185E560A00B1DD79 /* Images.xcassets */,
+				BC4DA64D185E560A00B1DD79 /* Supporting Files */,
+			);
+			name = Example;
+			path = DDCollaborativeDrawing;
+			sourceTree = "<group>";
+		};
+		BC4DA64D185E560A00B1DD79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA64E185E560A00B1DD79 /* DDCollaborativeDrawing-Info.plist */,
+				BC4DA64F185E560A00B1DD79 /* InfoPlist.strings */,
+				BC4DA652185E560A00B1DD79 /* main.m */,
+				BC4DA654185E560A00B1DD79 /* DDCollaborativeDrawing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC4DA673185E560A00B1DD79 /* DDCollaborativeDrawingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA679185E560A00B1DD79 /* DDCollaborativeDrawingTests.m */,
+				BC4DA674185E560A00B1DD79 /* Supporting Files */,
+			);
+			path = DDCollaborativeDrawingTests;
+			sourceTree = "<group>";
+		};
+		BC4DA674185E560A00B1DD79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA675185E560A00B1DD79 /* DDCollaborativeDrawingTests-Info.plist */,
+				BC4DA676185E560A00B1DD79 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC4DA686185E565400B1DD79 /* DDCollaborativeDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA683185E564500B1DD79 /* DDCollaborativeDrawingViewController.h */,
+				BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */,
+				BC4DA68A185E5BB800B1DD79 /* Session */,
+			);
+			path = DDCollaborativeDrawing;
+			sourceTree = "<group>";
+		};
+		BC4DA68A185E5BB800B1DD79 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */,
+				BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC4DA640185E560A00B1DD79 /* DDCollaborativeDrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4DA67D185E560A00B1DD79 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawing" */;
+			buildPhases = (
+				BC4DA63D185E560A00B1DD79 /* Sources */,
+				BC4DA63E185E560A00B1DD79 /* Frameworks */,
+				BC4DA63F185E560A00B1DD79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDCollaborativeDrawing;
+			productName = DDCollaborativeDrawing;
+			productReference = BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC4DA66B185E560A00B1DD79 /* DDCollaborativeDrawingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC4DA680185E560A00B1DD79 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawingTests" */;
+			buildPhases = (
+				BC4DA668185E560A00B1DD79 /* Sources */,
+				BC4DA669185E560A00B1DD79 /* Frameworks */,
+				BC4DA66A185E560A00B1DD79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC4DA672185E560A00B1DD79 /* PBXTargetDependency */,
+			);
+			name = DDCollaborativeDrawingTests;
+			productName = DDCollaborativeDrawingTests;
+			productReference = BC4DA66C185E560A00B1DD79 /* DDCollaborativeDrawingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC4DA639185E560A00B1DD79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = DeltaDog;
+				TargetAttributes = {
+					BC4DA66B185E560A00B1DD79 = {
+						TestTargetID = BC4DA640185E560A00B1DD79;
+					};
+				};
+			};
+			buildConfigurationList = BC4DA63C185E560A00B1DD79 /* Build configuration list for PBXProject "DDCollaborativeDrawing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC4DA638185E560A00B1DD79;
+			productRefGroup = BC4DA642185E560A00B1DD79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC4DA640185E560A00B1DD79 /* DDCollaborativeDrawing */,
+				BC4DA66B185E560A00B1DD79 /* DDCollaborativeDrawingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC4DA63F185E560A00B1DD79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA665185E560A00B1DD79 /* Spaceship.png in Resources */,
+				BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */,
+				BC4DA65D185E560A00B1DD79 /* Main_iPad.storyboard in Resources */,
+				BC4DA65A185E560A00B1DD79 /* Main_iPhone.storyboard in Resources */,
+				BC4DA651185E560A00B1DD79 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4DA66A185E560A00B1DD79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA678185E560A00B1DD79 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC4DA63D185E560A00B1DD79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA657185E560A00B1DD79 /* DDAppDelegate.m in Sources */,
+				BC4DA660185E560A00B1DD79 /* DDViewController.m in Sources */,
+				BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */,
+				BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */,
+				BC4DA663185E560A00B1DD79 /* DDMyScene.m in Sources */,
+				BC4DA653185E560A00B1DD79 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4DA668185E560A00B1DD79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC4DA67A185E560A00B1DD79 /* DDCollaborativeDrawingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC4DA672185E560A00B1DD79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC4DA640185E560A00B1DD79 /* DDCollaborativeDrawing */;
+			targetProxy = BC4DA671185E560A00B1DD79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC4DA64F185E560A00B1DD79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4DA650185E560A00B1DD79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BC4DA658185E560A00B1DD79 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4DA659185E560A00B1DD79 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BC4DA65B185E560A00B1DD79 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4DA65C185E560A00B1DD79 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BC4DA676185E560A00B1DD79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC4DA677185E560A00B1DD79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC4DA67B185E560A00B1DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC4DA67C185E560A00B1DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC4DA67E185E560A00B1DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawing/DDCollaborativeDrawing-Prefix.pch";
+				INFOPLIST_FILE = "DDCollaborativeDrawing/DDCollaborativeDrawing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BC4DA67F185E560A00B1DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawing/DDCollaborativeDrawing-Prefix.pch";
+				INFOPLIST_FILE = "DDCollaborativeDrawing/DDCollaborativeDrawing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BC4DA681185E560A00B1DD79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDCollaborativeDrawing.app/DDCollaborativeDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawing/DDCollaborativeDrawing-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BC4DA682185E560A00B1DD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDCollaborativeDrawing.app/DDCollaborativeDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawing/DDCollaborativeDrawing-Prefix.pch";
+				INFOPLIST_FILE = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC4DA63C185E560A00B1DD79 /* Build configuration list for PBXProject "DDCollaborativeDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4DA67B185E560A00B1DD79 /* Debug */,
+				BC4DA67C185E560A00B1DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC4DA67D185E560A00B1DD79 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4DA67E185E560A00B1DD79 /* Debug */,
+				BC4DA67F185E560A00B1DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC4DA680185E560A00B1DD79 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC4DA681185E560A00B1DD79 /* Debug */,
+				BC4DA682185E560A00B1DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC4DA639185E560A00B1DD79 /* Project object */;
+}
