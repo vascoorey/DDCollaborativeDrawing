@@ -1,0 +1,19 @@
+PODS:
+  - Expecta (0.2.3)
+  - Masonry (0.3.1)
+  - Specta (0.2.1)
+  - Underscore.m (0.2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - Masonry
+  - Specta
+  - Underscore.m
+
+SPEC CHECKSUMS:
+  Expecta: dbc4a27fabb853bdd2e907e33f11ee43a9a47d0c
+  Masonry: 9d43e954fbe6e903002acd063e11aa648800a310
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
+  Underscore.m: 593ea54a19d3cc4439387a83d36eb7ba6ffd1707
+
+COCOAPODS: 0.28.0
