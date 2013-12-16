@@ -1,5 +1,5 @@
 //
-//  DDCollaborativeDrawingMessage.h
+//  DDCollaborativeMessage.h
 //  DDCollaborativeDrawing
 //
 //  Created by Vasco d'Orey on 15/12/13.
@@ -26,8 +26,17 @@ typedef NS_ENUM(NSInteger, DDCollaborativeAction)
 {
   DDCollaborativeActionNone = -1,
   DDCollaborativeActionDraw,
+  /**
+   *  Erase is not currently supported. Does nothing.
+   */
   DDCollaborativeActionErase,
+  /**
+   *  Ban is not currently supported. Does nothing.
+   */
   DDCollaborativeActionBan,
+  /**
+   *  Unban is not currently supported. Does nothing.
+   */
   DDCollaborativeActionUnban,
   DDCollaborativeActionCount
 };
@@ -50,6 +59,13 @@ typedef NS_ENUM(NSInteger, DDCollaborativeState)
 DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeAction(DDCollaborativeAction);
 
 /**
+ *  @param The string
+ *
+ *  @return The DDCollaborativeAction type represented
+ */
+DD_EXPORT_INLINE DDCollaborativeAction DDCollaborativeActionFromNSString(NSString *);
+
+/**
  *  @param DDCollaborativeState The state
  *
  *  @return An NSString representation of the state. nil if DDCollaborativeStateNone or other invalid state.
@@ -57,14 +73,21 @@ DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeAction(DDCollaborativeActi
 DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeState(DDCollaborativeState);
 
 /**
+ *  @param  The string
+ *
+ *  @return The DDCollaborativeState type represented
+ */
+DD_EXPORT_INLINE DDCollaborativeState DDCollaborativeStateFromNSString(NSString *);
+
+/**
  *  Represents a collaborative drawing message passed between devices
  */
-@interface DDCollaborativeDrawingMessage : NSObject
+@interface DDCollaborativeMessage : NSObject
 
 /**
  *  @return A new DDCollaborativeDrawingMessage with the given action and state
  */
-+ (instancetype)messageWithOwner:(DDParticipant *)owner action:(DDCollaborativeAction)action state:(DDCollaborativeState)state;
++ (instancetype)messageWithOwner:(DDParticipant *)owner action:(DDCollaborativeAction)action;
 
 /**
  *  @return A new DDCollaborativeDrawingMessage from the given NSData
@@ -82,8 +105,45 @@ DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeState(DDCollaborativeState
 @property (nonatomic, readonly) DDCollaborativeState state;
 
 /**
+ *  The point (to draw). Sent with DDCollaborativeState[Began|Moved]
+ */
+@property (nonatomic, readonly) CGPoint point;
+
+/**
+ *  The path (to draw). Sent with DDCollaborativeStateEnded
+ */
+@property (nonatomic, readonly) UIBezierPath *path;
+
+/**
+ *  This message's ownwer
+ */
+@property (nonatomic, readonly) DDParticipant *owner;
+
+/**
  *  @return A concise NSData representation of the current message.
  */
 - (NSData *)data;
+
+/**
+ *  Sets the given point (only valid if action is DDCollaborativeActionDraw)
+ *  The first time this is set the state is set to DDDrawingStateBegan, subsequent times will set it to DDDrawingStateMoved
+ */
+- (void)setDrawPoint:(CGPoint)point;
+
+/**
+ *  Sets the given drawing color. Will set state to DDDrawingStateEnded
+ */
+- (void)setDrawColor:(UIColor *)color;
+
+/**
+ *  Sets the given path (only valid if state is DDCollaborativeStateEnded and action is DDCollaborativeActionDraw)
+ */
+- (void)setDrawPath:(UIBezierPath *)path;
+
+@end
+
+@interface DDCollaborativeMessage (Deprecated)
+
+- (id)init __deprecated_msg("Use the provided class contructors");
 
 @end

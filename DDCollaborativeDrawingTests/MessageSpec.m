@@ -18,19 +18,27 @@
 //  limitations under the License.'
 //
 
-#import "DDCollaborativeDrawingMessage.h"
+#import "DDCollaborativeMessage.h"
+#import "DDParticipant.h"
 
 SpecBegin(DDCollaborativeDrawingMessage)
 
 describe(@"DDCollaborativeAction type should be valid", ^{
   it(@"should have a unique string for every action", ^{
-    for(NSUInteger initial = 1; initial < DDCollaborativeActionCount; initial ++)
+    for(NSInteger initial = 0; initial < DDCollaborativeActionCount; initial ++)
     {
       NSString *initialAction = NSStringFromDDCollaborativeAction((DDCollaborativeAction)initial);
-      for(NSUInteger compare = initial + 1; compare < DDCollaborativeActionCount; compare ++)
+      for(NSInteger compare = initial + 1; compare < DDCollaborativeActionCount; compare ++)
       {
         expect(initialAction).toNot.equal(NSStringFromDDCollaborativeAction((DDCollaborativeAction)compare));
       }
+    }
+  });
+  
+  it(@"should properly convert from strings back to actions", ^{
+    for(NSInteger initial = 0; initial < DDCollaborativeActionCount; initial ++)
+    {
+      expect(@(DDCollaborativeActionFromNSString(NSStringFromDDCollaborativeAction((DDCollaborativeAction)initial)))).to.equal(@((DDCollaborativeAction)initial));
     }
   });
 });
@@ -46,10 +54,24 @@ describe(@"DDCollaborativeState type should be valid", ^{
       }
     }
   });
+  
+  it(@"should properly convert from strings back to states", ^{
+    for(NSInteger initial = 0; initial < DDCollaborativeActionCount; initial ++)
+    {
+      expect(@(DDCollaborativeStateFromNSString(NSStringFromDDCollaborativeState((DDCollaborativeState)initial)))).to.equal(@((DDCollaborativeState)initial));
+    }
+  });
 });
 
 describe(@"A message should encapsulate the whole API", ^{
-  
+  it(@"should create messages correctly", ^{
+    DDParticipant *participant = [DDParticipant participantWithIdentifier:@"hello" type:DDParticipantTypeGuest];
+    DDCollaborativeMessage *message = [DDCollaborativeMessage messageWithOwner:participant action:DDCollaborativeActionDraw];
+    expect(message).toNot.beNil();
+    expect(@(message.state)).to.equal(@(DDCollaborativeStateBegan));
+    expect(@(message.action)).to.equal(@(DDCollaborativeActionDraw));
+    expect(message.owner).to.equal(participant);
+  });
 });
 
 SpecEnd

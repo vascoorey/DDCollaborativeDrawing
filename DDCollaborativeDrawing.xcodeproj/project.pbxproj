@@ -23,8 +23,8 @@
 		BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA666185E560A00B1DD79 /* Images.xcassets */; };
 		BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */; };
 		BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */; };
-		BC92DA52185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m */; };
-		BC92DA53185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m */; };
+		BC92DA52185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */; };
+		BC92DA53185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */; };
 		BC92DA55185F1D2C00B0C051 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA54185F1D2C00B0C051 /* MessageSpec.m */; };
 		BC92DA58185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
 		BC92DA59185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
@@ -77,8 +77,8 @@
 		BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingViewController.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.m; sourceTree = "<group>"; };
 		BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingSession.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.h; sourceTree = "<group>"; };
 		BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingSession.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.m; sourceTree = "<group>"; };
-		BC92DA50185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingMessage.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingMessage.h; sourceTree = "<group>"; };
-		BC92DA51185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingMessage.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingMessage.m; sourceTree = "<group>"; };
+		BC92DA50185F1A0E00B0C051 /* DDCollaborativeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeMessage.h; path = DDCollaborativeDrawing/DDCollaborativeMessage.h; sourceTree = "<group>"; };
+		BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeMessage.m; path = DDCollaborativeDrawing/DDCollaborativeMessage.m; sourceTree = "<group>"; };
 		BC92DA54185F1D2C00B0C051 /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSpec.m; sourceTree = "<group>"; };
 		BC92DA56185F1DFD00B0C051 /* DDParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDParticipant.h; path = DDCollaborativeDrawing/DDParticipant.h; sourceTree = "<group>"; };
 		BC92DA57185F1DFD00B0C051 /* DDParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDParticipant.m; path = DDCollaborativeDrawing/DDParticipant.m; sourceTree = "<group>"; };
@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0883F0185F74EA003BB39D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BC92DA50185F1A0E00B0C051 /* DDCollaborativeMessage.h */,
+				BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
 		BC4DA638185E560A00B1DD79 = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +210,7 @@
 			children = (
 				BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */,
 				BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */,
-				BC92DA50185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.h */,
-				BC92DA51185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m */,
+				BC0883F0185F74EA003BB39D /* Message */,
 				BC92DA56185F1DFD00B0C051 /* DDParticipant.h */,
 				BC92DA57185F1DFD00B0C051 /* DDParticipant.m */,
 			);
@@ -402,7 +410,7 @@
 				BC4DA657185E560A00B1DD79 /* DDAppDelegate.m in Sources */,
 				BC4DA660185E560A00B1DD79 /* DDViewController.m in Sources */,
 				BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */,
-				BC92DA52185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m in Sources */,
+				BC92DA52185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */,
 				BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */,
 				BC4DA663185E560A00B1DD79 /* DDMyScene.m in Sources */,
 				BC4DA653185E560A00B1DD79 /* main.m in Sources */,
@@ -415,7 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC92DA55185F1D2C00B0C051 /* MessageSpec.m in Sources */,
-				BC92DA53185F1A0E00B0C051 /* DDCollaborativeDrawingMessage.m in Sources */,
+				BC92DA53185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */,
 				BCBE5D38185F181400184F81 /* SessionSpec.m in Sources */,
 				BC92DA59185F1DFD00B0C051 /* DDParticipant.m in Sources */,
 				BC92DA5B185F1E3100B0C051 /* ParticipantSpec.m in Sources */,
