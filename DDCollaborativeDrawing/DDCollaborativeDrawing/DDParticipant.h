@@ -20,6 +20,7 @@
 
 @import Foundation;
 @import MultipeerConnectivity;
+@import SpriteKit;
 
 typedef NS_ENUM(unsigned short, DDParticipantType)
 {
@@ -67,6 +68,11 @@ DD_EXPORT_INLINE BOOL IsValidParticipantType(DDParticipantType);
  *  The participant type.
  */
 @property (nonatomic, readonly) DDParticipantType type;
+
+/**
+ *  The participant's photo. Defaults to 
+ */
+@property (nonatomic, strong) SKSpriteNode *photo;
 
 @end
 

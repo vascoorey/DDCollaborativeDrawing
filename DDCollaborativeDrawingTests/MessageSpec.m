@@ -22,6 +22,32 @@
 
 SpecBegin(DDCollaborativeDrawingMessage)
 
+describe(@"DDCollaborativeAction type should be valid", ^{
+  it(@"should have a unique string for every action", ^{
+    for(NSUInteger initial = 1; initial < DDCollaborativeActionCount; initial ++)
+    {
+      NSString *initialAction = NSStringFromDDCollaborativeAction((DDCollaborativeAction)initial);
+      for(NSUInteger compare = initial + 1; compare < DDCollaborativeActionCount; compare ++)
+      {
+        expect(initialAction).toNot.equal(NSStringFromDDCollaborativeAction((DDCollaborativeAction)compare));
+      }
+    }
+  });
+});
+
+describe(@"DDCollaborativeState type should be valid", ^{
+  it(@"should have a unique string for every action", ^{
+    for(NSUInteger initial = 1; initial < DDCollaborativeStateCount; initial ++)
+    {
+      NSString *initialState = NSStringFromDDCollaborativeState((DDCollaborativeState)initial);
+      for(NSUInteger compare = initial + 1; compare < DDCollaborativeStateCount; compare ++)
+      {
+        expect(initialState).toNot.equal(NSStringFromDDCollaborativeState((DDCollaborativeState)compare));
+      }
+    }
+  });
+});
+
 describe(@"A message should encapsulate the whole API", ^{
   
 });

@@ -22,37 +22,39 @@
 
 @class DDParticipant;
 
-typedef NS_ENUM(unsigned short, DDCollaborativeAction)
+typedef NS_ENUM(NSInteger, DDCollaborativeAction)
 {
-  DDCollaborativeActionNone = 0,
+  DDCollaborativeActionNone = -1,
   DDCollaborativeActionDraw,
   DDCollaborativeActionErase,
   DDCollaborativeActionBan,
-  DDCollaborativeActionUnban
+  DDCollaborativeActionUnban,
+  DDCollaborativeActionCount
 };
 
-typedef NS_ENUM(unsigned short, DDCollaborativeState)
+typedef NS_ENUM(NSInteger, DDCollaborativeState)
 {
-  DDCollaborativeStateNone = 0,
+  DDCollaborativeStateNone = -1,
   DDCollaborativeStateBegan,
   DDCollaborativeStateMoved,
   DDCollaborativeStateEnded,
-  DDCollaborativeStateCancelled
+  DDCollaborativeStateCancelled,
+  DDCollaborativeStateCount
 };
 
 /**
  *  @param DDCollaborativeAction The action
  *
- *  @return A unique NSString representation of the action.
+ *  @return An NSString representation of the action. nil if DDCollaborativeActionNone or other invalid action.
  */
-DD_EXPORT NSString *NSStringFromDDCollaborativeAction(DDCollaborativeAction);
+DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeAction(DDCollaborativeAction);
 
 /**
  *  @param DDCollaborativeState The state
  *
- *  @return A unique NSString representation of the state.
+ *  @return An NSString representation of the state. nil if DDCollaborativeStateNone or other invalid state.
  */
-DD_EXPORT NSString *NSStringFromDDCollaborativeState(DDCollaborativeState);
+DD_EXPORT_INLINE NSString *NSStringFromDDCollaborativeState(DDCollaborativeState);
 
 /**
  *  Represents a collaborative drawing message passed between devices

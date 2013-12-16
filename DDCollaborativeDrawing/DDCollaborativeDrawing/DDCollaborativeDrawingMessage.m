@@ -20,6 +20,50 @@
 
 #import "DDCollaborativeDrawingMessage.h"
 
+// All actions should be represented by two character strings
+NSString *NSStringFromDDCollaborativeAction(DDCollaborativeAction action)
+{
+  switch (action) {
+    case DDCollaborativeActionDraw:
+      return @"dr";
+      break;
+    case DDCollaborativeActionErase:
+      return @"er";
+      break;
+    case DDCollaborativeActionBan:
+      return @"ba";
+      break;
+    case DDCollaborativeActionUnban:
+      return @"un";
+      break;
+    default:
+      return nil;
+      break;
+  }
+}
+
+// All states should be represented by single character strings
+NSString *NSStringFromDDCollaborativeState(DDCollaborativeState state)
+{
+  switch (state) {
+    case DDCollaborativeStateBegan:
+      return @"b";
+      break;
+    case DDCollaborativeStateMoved:
+      return @"m";
+      break;
+    case DDCollaborativeStateEnded:
+      return @"e";
+      break;
+    case DDCollaborativeStateCancelled:
+      return @"c";
+      break;
+    default:
+      return nil;
+      break;
+  }
+}
+
 @implementation DDCollaborativeDrawingMessage
 
 @end

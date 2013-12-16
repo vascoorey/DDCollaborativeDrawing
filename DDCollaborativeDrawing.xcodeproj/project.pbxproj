@@ -29,6 +29,8 @@
 		BC92DA58185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
 		BC92DA59185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
 		BC92DA5B185F1E3100B0C051 /* ParticipantSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA5A185F1E3100B0C051 /* ParticipantSpec.m */; };
+		BC92DA5D185F56B700B0C051 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC92DA5C185F56B700B0C051 /* avatar.jpeg */; };
+		BC92DA5E185F56B700B0C051 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC92DA5C185F56B700B0C051 /* avatar.jpeg */; };
 		BCBE5D2E185F181400184F81 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA66D185E560A00B1DD79 /* XCTest.framework */; };
 		BCBE5D2F185F181400184F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA644185E560A00B1DD79 /* Foundation.framework */; };
 		BCBE5D30185F181400184F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA648185E560A00B1DD79 /* UIKit.framework */; };
@@ -81,6 +83,7 @@
 		BC92DA56185F1DFD00B0C051 /* DDParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDParticipant.h; path = DDCollaborativeDrawing/DDParticipant.h; sourceTree = "<group>"; };
 		BC92DA57185F1DFD00B0C051 /* DDParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDParticipant.m; path = DDCollaborativeDrawing/DDParticipant.m; sourceTree = "<group>"; };
 		BC92DA5A185F1E3100B0C051 /* ParticipantSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantSpec.m; sourceTree = "<group>"; };
+		BC92DA5C185F56B700B0C051 /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpeg; path = DDCollaborativeDrawing/avatar.jpeg; sourceTree = "<group>"; };
 		BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDCollaborativeDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBE5D33185F181400184F81 /* DDCollaborativeDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawingTests-Info.plist"; sourceTree = "<group>"; };
 		BCBE5D35185F181400184F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 				BC4DA661185E560A00B1DD79 /* DDMyScene.h */,
 				BC4DA662185E560A00B1DD79 /* DDMyScene.m */,
 				BC4DA664185E560A00B1DD79 /* Spaceship.png */,
+				BC92DA5C185F56B700B0C051 /* avatar.jpeg */,
 				BC4DA666185E560A00B1DD79 /* Images.xcassets */,
 				BC4DA64D185E560A00B1DD79 /* Supporting Files */,
 			);
@@ -309,6 +313,7 @@
 			files = (
 				BC4DA665185E560A00B1DD79 /* Spaceship.png in Resources */,
 				BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */,
+				BC92DA5D185F56B700B0C051 /* avatar.jpeg in Resources */,
 				BC4DA65D185E560A00B1DD79 /* Main_iPad.storyboard in Resources */,
 				BC4DA65A185E560A00B1DD79 /* Main_iPhone.storyboard in Resources */,
 				BC4DA651185E560A00B1DD79 /* InfoPlist.strings in Resources */,
@@ -319,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC92DA5E185F56B700B0C051 /* avatar.jpeg in Resources */,
 				BCBE5D36185F181400184F81 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

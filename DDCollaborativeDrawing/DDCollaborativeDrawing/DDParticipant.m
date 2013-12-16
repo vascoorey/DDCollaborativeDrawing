@@ -76,6 +76,17 @@ BOOL IsValidParticipantType(DDParticipantType type)
   return [[self alloc] initWithPeer:peerID type:type];
 }
 
+#pragma mark - Properties
+
+- (SKSpriteNode *)photo
+{
+  if(!_photo)
+  {
+    _photo = [SKSpriteNode spriteNodeWithImageNamed:@"avatar"];
+  }
+  return _photo;
+}
+
 #pragma mark - Lifecycle
 
 - (id)initWithIdentifier:(NSString *)identifier type:(DDParticipantType)type
