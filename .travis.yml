@@ -1,4 +1,5 @@
 rvm: 1.9.3
 language: objective-c
-workspace: DDCollaborativeDrawing.xcworkspace
-scheme: DDCollaborativeDrawing
+
+before_script: .travis/before.sh
+script: .travis/ci.sh
