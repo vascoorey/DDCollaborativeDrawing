@@ -22,7 +22,22 @@
 		BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA666185E560A00B1DD79 /* Images.xcassets */; };
 		BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */; };
 		BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */; };
+		BCBE5D2E185F181400184F81 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA66D185E560A00B1DD79 /* XCTest.framework */; };
+		BCBE5D2F185F181400184F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA644185E560A00B1DD79 /* Foundation.framework */; };
+		BCBE5D30185F181400184F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA648185E560A00B1DD79 /* UIKit.framework */; };
+		BCBE5D36185F181400184F81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCBE5D34185F181400184F81 /* InfoPlist.strings */; };
+		BCBE5D38185F181400184F81 /* SessionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBE5D37185F181400184F81 /* SessionSpec.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCBE5D3A185F181400184F81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC4DA639185E560A00B1DD79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC4DA640185E560A00B1DD79;
+			remoteInfo = DDCollaborativeDrawing;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDCollaborativeDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +64,11 @@
 		BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingViewController.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.m; sourceTree = "<group>"; };
 		BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingSession.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.h; sourceTree = "<group>"; };
 		BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingSession.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.m; sourceTree = "<group>"; };
+		BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDCollaborativeDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBE5D33185F181400184F81 /* DDCollaborativeDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawingTests-Info.plist"; sourceTree = "<group>"; };
+		BCBE5D35185F181400184F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCBE5D37185F181400184F81 /* SessionSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionSpec.m; sourceTree = "<group>"; };
+		BCBE5D39185F181400184F81 /* DDCollaborativeDrawingTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDCollaborativeDrawingTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCBE5D2A185F181400184F81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBE5D2E185F181400184F81 /* XCTest.framework in Frameworks */,
+				BCBE5D30185F181400184F81 /* UIKit.framework in Frameworks */,
+				BCBE5D2F185F181400184F81 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +101,7 @@
 			children = (
 				BC4DA686185E565400B1DD79 /* DDCollaborativeDrawing */,
 				BC4DA64C185E560A00B1DD79 /* Example */,
+				BCBE5D31185F181400184F81 /* DDCollaborativeDrawingTests */,
 				BC4DA643185E560A00B1DD79 /* Frameworks */,
 				BC4DA642185E560A00B1DD79 /* Products */,
 			);
@@ -80,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */,
+				BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +177,25 @@
 			name = Session;
 			sourceTree = "<group>";
 		};
+		BCBE5D31185F181400184F81 /* DDCollaborativeDrawingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCBE5D37185F181400184F81 /* SessionSpec.m */,
+				BCBE5D32185F181400184F81 /* Supporting Files */,
+			);
+			path = DDCollaborativeDrawingTests;
+			sourceTree = "<group>";
+		};
+		BCBE5D32185F181400184F81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCBE5D33185F181400184F81 /* DDCollaborativeDrawingTests-Info.plist */,
+				BCBE5D34185F181400184F81 /* InfoPlist.strings */,
+				BCBE5D39185F181400184F81 /* DDCollaborativeDrawingTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +216,24 @@
 			productReference = BC4DA641185E560A00B1DD79 /* DDCollaborativeDrawing.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BCBE5D2C185F181400184F81 /* DDCollaborativeDrawingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCBE5D3C185F181400184F81 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawingTests" */;
+			buildPhases = (
+				BCBE5D29185F181400184F81 /* Sources */,
+				BCBE5D2A185F181400184F81 /* Frameworks */,
+				BCBE5D2B185F181400184F81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCBE5D3B185F181400184F81 /* PBXTargetDependency */,
+			);
+			name = DDCollaborativeDrawingTests;
+			productName = DDCollaborativeDrawingTests;
+			productReference = BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -174,6 +243,11 @@
 				CLASSPREFIX = DD;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = DeltaDog;
+				TargetAttributes = {
+					BCBE5D2C185F181400184F81 = {
+						TestTargetID = BC4DA640185E560A00B1DD79;
+					};
+				};
 			};
 			buildConfigurationList = BC4DA63C185E560A00B1DD79 /* Build configuration list for PBXProject "DDCollaborativeDrawing" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -189,6 +263,7 @@
 			projectRoot = "";
 			targets = (
 				BC4DA640185E560A00B1DD79 /* DDCollaborativeDrawing */,
+				BCBE5D2C185F181400184F81 /* DDCollaborativeDrawingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +278,14 @@
 				BC4DA65D185E560A00B1DD79 /* Main_iPad.storyboard in Resources */,
 				BC4DA65A185E560A00B1DD79 /* Main_iPhone.storyboard in Resources */,
 				BC4DA651185E560A00B1DD79 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCBE5D2B185F181400184F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBE5D36185F181400184F81 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCBE5D29185F181400184F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCBE5D38185F181400184F81 /* SessionSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCBE5D3B185F181400184F81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC4DA640185E560A00B1DD79 /* DDCollaborativeDrawing */;
+			targetProxy = BCBE5D3A185F181400184F81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC4DA64F185E560A00B1DD79 /* InfoPlist.strings */ = {
@@ -247,6 +346,14 @@
 				BC4DA65C185E560A00B1DD79 /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BCBE5D34185F181400184F81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCBE5D35185F181400184F81 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -354,6 +461,48 @@
 			};
 			name = Release;
 		};
+		BCBE5D3D185F181400184F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDCollaborativeDrawing.app/DDCollaborativeDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BCBE5D3E185F181400184F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DDCollaborativeDrawing.app/DDCollaborativeDrawing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Prefix.pch";
+				INFOPLIST_FILE = "DDCollaborativeDrawingTests/DDCollaborativeDrawingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +520,15 @@
 			buildConfigurations = (
 				BC4DA67E185E560A00B1DD79 /* Debug */,
 				BC4DA67F185E560A00B1DD79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCBE5D3C185F181400184F81 /* Build configuration list for PBXNativeTarget "DDCollaborativeDrawingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCBE5D3D185F181400184F81 /* Debug */,
+				BCBE5D3E185F181400184F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
