@@ -14,4 +14,5 @@
   #import <UIKit/UIKit.h>
   #import <Foundation/Foundation.h>
   #define DD_EXPORT extern
+  #define DD_EXPORT_INLINE extern inline
 #endif
