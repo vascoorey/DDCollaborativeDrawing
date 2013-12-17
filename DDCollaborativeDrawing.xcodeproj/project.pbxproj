@@ -17,18 +17,11 @@
 		BC4DA657185E560A00B1DD79 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */; };
 		BC4DA65A185E560A00B1DD79 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA658185E560A00B1DD79 /* Main_iPhone.storyboard */; };
 		BC4DA65D185E560A00B1DD79 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA65B185E560A00B1DD79 /* Main_iPad.storyboard */; };
-		BC4DA660185E560A00B1DD79 /* DDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA65F185E560A00B1DD79 /* DDViewController.m */; };
-		BC4DA663185E560A00B1DD79 /* DDMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA662185E560A00B1DD79 /* DDMyScene.m */; };
+		BC4DA660185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA65F185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.m */; };
+		BC4DA663185E560A00B1DD79 /* DDCollaborativeDrawingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA662185E560A00B1DD79 /* DDCollaborativeDrawingScene.m */; };
 		BC4DA665185E560A00B1DD79 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA664185E560A00B1DD79 /* Spaceship.png */; };
 		BC4DA667185E560A00B1DD79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4DA666185E560A00B1DD79 /* Images.xcassets */; };
-		BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */; };
 		BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */; };
-		BC92DA52185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */; };
-		BC92DA53185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */; };
-		BC92DA55185F1D2C00B0C051 /* MessageSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA54185F1D2C00B0C051 /* MessageSpec.m */; };
-		BC92DA58185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
-		BC92DA59185F1DFD00B0C051 /* DDParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA57185F1DFD00B0C051 /* DDParticipant.m */; };
-		BC92DA5B185F1E3100B0C051 /* ParticipantSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BC92DA5A185F1E3100B0C051 /* ParticipantSpec.m */; };
 		BC92DA5D185F56B700B0C051 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC92DA5C185F56B700B0C051 /* avatar.jpeg */; };
 		BC92DA5E185F56B700B0C051 /* avatar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC92DA5C185F56B700B0C051 /* avatar.jpeg */; };
 		BCBE5D2E185F181400184F81 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DA66D185E560A00B1DD79 /* XCTest.framework */; };
@@ -66,23 +59,15 @@
 		BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
 		BC4DA659185E560A00B1DD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		BC4DA65C185E560A00B1DD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		BC4DA65E185E560A00B1DD79 /* DDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDViewController.h; sourceTree = "<group>"; };
-		BC4DA65F185E560A00B1DD79 /* DDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDViewController.m; sourceTree = "<group>"; };
-		BC4DA661185E560A00B1DD79 /* DDMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMyScene.h; sourceTree = "<group>"; };
-		BC4DA662185E560A00B1DD79 /* DDMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDMyScene.m; sourceTree = "<group>"; };
+		BC4DA65E185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCollaborativeDrawingExampleViewController.h; sourceTree = "<group>"; };
+		BC4DA65F185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCollaborativeDrawingExampleViewController.m; sourceTree = "<group>"; };
+		BC4DA661185E560A00B1DD79 /* DDCollaborativeDrawingScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDCollaborativeDrawingScene.h; sourceTree = "<group>"; };
+		BC4DA662185E560A00B1DD79 /* DDCollaborativeDrawingScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDCollaborativeDrawingScene.m; sourceTree = "<group>"; };
 		BC4DA664185E560A00B1DD79 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		BC4DA666185E560A00B1DD79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BC4DA66D185E560A00B1DD79 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BC4DA683185E564500B1DD79 /* DDCollaborativeDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingViewController.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.h; sourceTree = "<group>"; };
-		BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingViewController.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingViewController.m; sourceTree = "<group>"; };
 		BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingSession.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.h; sourceTree = "<group>"; };
 		BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingSession.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.m; sourceTree = "<group>"; };
-		BC92DA50185F1A0E00B0C051 /* DDCollaborativeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeMessage.h; path = DDCollaborativeDrawing/DDCollaborativeMessage.h; sourceTree = "<group>"; };
-		BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeMessage.m; path = DDCollaborativeDrawing/DDCollaborativeMessage.m; sourceTree = "<group>"; };
-		BC92DA54185F1D2C00B0C051 /* MessageSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSpec.m; sourceTree = "<group>"; };
-		BC92DA56185F1DFD00B0C051 /* DDParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDParticipant.h; path = DDCollaborativeDrawing/DDParticipant.h; sourceTree = "<group>"; };
-		BC92DA57185F1DFD00B0C051 /* DDParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDParticipant.m; path = DDCollaborativeDrawing/DDParticipant.m; sourceTree = "<group>"; };
-		BC92DA5A185F1E3100B0C051 /* ParticipantSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantSpec.m; sourceTree = "<group>"; };
 		BC92DA5C185F56B700B0C051 /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpeg; path = DDCollaborativeDrawing/avatar.jpeg; sourceTree = "<group>"; };
 		BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDCollaborativeDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBE5D33185F181400184F81 /* DDCollaborativeDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawingTests-Info.plist"; sourceTree = "<group>"; };
@@ -119,15 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC0883F0185F74EA003BB39D /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				BC92DA50185F1A0E00B0C051 /* DDCollaborativeMessage.h */,
-				BC92DA51185F1A0E00B0C051 /* DDCollaborativeMessage.m */,
-			);
-			name = Message;
-			sourceTree = "<group>";
-		};
 		BC4DA638185E560A00B1DD79 = {
 			isa = PBXGroup;
 			children = (
@@ -171,10 +147,10 @@
 				BC4DA656185E560A00B1DD79 /* DDAppDelegate.m */,
 				BC4DA658185E560A00B1DD79 /* Main_iPhone.storyboard */,
 				BC4DA65B185E560A00B1DD79 /* Main_iPad.storyboard */,
-				BC4DA65E185E560A00B1DD79 /* DDViewController.h */,
-				BC4DA65F185E560A00B1DD79 /* DDViewController.m */,
-				BC4DA661185E560A00B1DD79 /* DDMyScene.h */,
-				BC4DA662185E560A00B1DD79 /* DDMyScene.m */,
+				BC4DA65E185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.h */,
+				BC4DA65F185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.m */,
+				BC4DA661185E560A00B1DD79 /* DDCollaborativeDrawingScene.h */,
+				BC4DA662185E560A00B1DD79 /* DDCollaborativeDrawingScene.m */,
 				BC4DA664185E560A00B1DD79 /* Spaceship.png */,
 				BC92DA5C185F56B700B0C051 /* avatar.jpeg */,
 				BC4DA666185E560A00B1DD79 /* Images.xcassets */,
@@ -198,31 +174,16 @@
 		BC4DA686185E565400B1DD79 /* DDCollaborativeDrawing */ = {
 			isa = PBXGroup;
 			children = (
-				BC4DA683185E564500B1DD79 /* DDCollaborativeDrawingViewController.h */,
-				BC4DA684185E564500B1DD79 /* DDCollaborativeDrawingViewController.m */,
-				BC4DA68A185E5BB800B1DD79 /* Session */,
-			);
-			path = DDCollaborativeDrawing;
-			sourceTree = "<group>";
-		};
-		BC4DA68A185E5BB800B1DD79 /* Session */ = {
-			isa = PBXGroup;
-			children = (
 				BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */,
 				BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */,
-				BC0883F0185F74EA003BB39D /* Message */,
-				BC92DA56185F1DFD00B0C051 /* DDParticipant.h */,
-				BC92DA57185F1DFD00B0C051 /* DDParticipant.m */,
 			);
-			name = Session;
+			path = DDCollaborativeDrawing;
 			sourceTree = "<group>";
 		};
 		BCBE5D31185F181400184F81 /* DDCollaborativeDrawingTests */ = {
 			isa = PBXGroup;
 			children = (
 				BCBE5D37185F181400184F81 /* SessionSpec.m */,
-				BC92DA54185F1D2C00B0C051 /* MessageSpec.m */,
-				BC92DA5A185F1E3100B0C051 /* ParticipantSpec.m */,
 				BCBE5D32185F181400184F81 /* Supporting Files */,
 			);
 			path = DDCollaborativeDrawingTests;
@@ -408,13 +369,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4DA657185E560A00B1DD79 /* DDAppDelegate.m in Sources */,
-				BC4DA660185E560A00B1DD79 /* DDViewController.m in Sources */,
-				BC4DA685185E564500B1DD79 /* DDCollaborativeDrawingViewController.m in Sources */,
-				BC92DA52185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */,
+				BC4DA660185E560A00B1DD79 /* DDCollaborativeDrawingExampleViewController.m in Sources */,
 				BC4DA689185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m in Sources */,
-				BC4DA663185E560A00B1DD79 /* DDMyScene.m in Sources */,
+				BC4DA663185E560A00B1DD79 /* DDCollaborativeDrawingScene.m in Sources */,
 				BC4DA653185E560A00B1DD79 /* main.m in Sources */,
-				BC92DA58185F1DFD00B0C051 /* DDParticipant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,11 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC92DA55185F1D2C00B0C051 /* MessageSpec.m in Sources */,
-				BC92DA53185F1A0E00B0C051 /* DDCollaborativeMessage.m in Sources */,
 				BCBE5D38185F181400184F81 /* SessionSpec.m in Sources */,
-				BC92DA59185F1DFD00B0C051 /* DDParticipant.m in Sources */,
-				BC92DA5B185F1E3100B0C051 /* ParticipantSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

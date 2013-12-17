@@ -1,5 +1,5 @@
 //
-//  DDCollaborativeDrawingViewController.m
+//  DDMyScene.h
 //  DDCollaborativeDrawing
 //
 //  Created by Vasco d'Orey on 15/12/13.
@@ -18,12 +18,8 @@
 //  limitations under the License.'
 //
 
-#import "DDCollaborativeDrawingViewController.h"
+#import <SpriteKit/SpriteKit.h>
 
-@interface DDCollaborativeDrawingViewController ()
-
-@end
-
-@implementation DDCollaborativeDrawingViewController
+@interface DDCollaborativeDrawingScene : SKScene
 
 @end

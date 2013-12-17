@@ -1,5 +1,5 @@
 //
-//  DDViewController.h
+//  DDCollaborativeDrawingExampleViewController.h
 //  DDCollaborativeDrawing
 //
 //  Created by Vasco d'Orey on 15/12/13.
@@ -21,6 +21,6 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface DDViewController : UIViewController
+@interface DDCollaborativeDrawingExampleViewController : UIViewController
 
 @end
