@@ -176,28 +176,48 @@ BOOL IsValidStateTransition(DDCollaborativeAction action, DDCollaborativeState f
 }
 
 @interface DDCollaborativeDrawingSession () <MCNearbyServiceAdvertiserDelegate, MCNearbyServiceBrowserDelegate, MCSessionDelegate>
+
+@property (nonatomic, readwrite, getter = isBrowsing) BOOL browsing;
+
+@property (nonatomic, readwrite, getter = isAdvertising) BOOL advertising;
+
 @property (nonatomic, weak) id <DDCollaborativeDrawing> delegate;
+
 @property (nonatomic) DDCollaborativeAction currentAction;
+
 @property (nonatomic) DDCollaborativeState currentState;
+
 @property (nonatomic, copy) NSString *identifier;
+
 @property (nonatomic, copy) NSDictionary *userInfo;
+
 @property (nonatomic, strong, readwrite) MCNearbyServiceBrowser *browser;
-@property (nonatomic, getter = isBrowsing) BOOL browsing;
+
 @property (nonatomic, strong, readwrite) MCNearbyServiceAdvertiser *advertiser;
+
 @property (nonatomic, strong) MCSession *session;
+
 @property (nonatomic, strong) MCPeerID *peer;
+
 @property (nonatomic, strong, readwrite) NSMutableArray *peers;
+
 @property (nonatomic, strong) NSMutableDictionary *peersInfo;
+
 @property (nonatomic) CGMutablePathRef currentPath;
+
 @property NSUInteger actionsSinceDataSent;
+
 - (void)setup;
+
 - (NSData *)sendParams:(NSDictionary *)params mode:(MCSessionSendDataMode)mode forceSend:(BOOL)forceSend;
+
 - (void)handleData:(NSData *)data fromPeer:(MCPeerID *)peer;
+
 @end
 
 @implementation DDCollaborativeDrawingSession
 
-#pragma mark - Class
+#pragma mark - Class Methods
 
 + (instancetype)sessionWithIdentifier:(NSString *)identifier delegate:(id <DDCollaborativeDrawing>)delegate userInfo:(NSDictionary *)userInfo
 {
@@ -271,14 +291,34 @@ BOOL IsValidStateTransition(DDCollaborativeAction action, DDCollaborativeState f
   self.advertiser.delegate = self;
 }
 
-- (void)startBrowsingPeers
+- (void)startBrowsingForPeers
 {
-  [self.browser startBrowsingForPeers];
+  if(!self.isBrowsing)
+  {
+    [self.browser startBrowsingForPeers];
+  }
+  self.browsing = YES;
+}
+
+- (void)stopBrowsingForPeers
+{
+  [self.browser stopBrowsingForPeers];
+  self.browsing = NO;
 }
 
 - (void)startAdvertisingPeer
 {
-  [self.advertiser startAdvertisingPeer];
+  if(!self.isAdvertising)
+  {
+    [self.advertiser startAdvertisingPeer];
+  }
+  self.advertising = YES;
+}
+
+- (void)stopAdvertisingPeer
+{
+  [self.advertiser stopAdvertisingPeer];
+  self.advertising = NO;
 }
 
 - (void)stop

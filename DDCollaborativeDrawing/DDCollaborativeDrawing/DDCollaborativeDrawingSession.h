@@ -150,12 +150,41 @@ DD_EXPORT_INLINE BOOL IsValidStateTransition(DDCollaborativeAction, DDCollaborat
  */
 + (instancetype)sessionWithIdentifier:(NSString *)identifier delegate:(id <DDCollaborativeDrawing>)delegate userInfo:(NSDictionary *)userInfo;
 
-
+/**
+ *  Set this property to change the frequency of updates.
+ *  Will raise an NSInvalidArgumentException if the given resolution is invalid.
+ */
 @property (nonatomic) DDCollaborativeMovementResolution movementResolution;
 
-@property (nonatomic, readonly) MCNearbyServiceAdvertiser *advertiser;
+/**
+ *  Is the current instance browsing for peers?
+ */
+@property (nonatomic, readonly, getter = isBrowsing) BOOL browsing;
 
-@property (nonatomic, readonly) MCNearbyServiceBrowser *browser;
+/**
+ *  Is the current instance advertising ?
+ */
+@property (nonatomic, readonly, getter = isAdvertising) BOOL advertising;
+
+/**
+ *  Starts browsing.
+ */
+- (void)startBrowsingForPeers;
+
+/**
+ *  Stops browsing.
+ */
+- (void)stopBrowsingForPeers;
+
+/**
+ *  Starts advertising.
+ */
+- (void)startAdvertisingPeer;
+
+/**
+ *  Stops advertising.
+ */
+- (void)stopAdvertisingPeer;
 
 /**
  *  Stops all actions

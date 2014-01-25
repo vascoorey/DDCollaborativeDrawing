@@ -68,6 +68,8 @@
 		BC4DA66D185E560A00B1DD79 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BC4DA687185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCollaborativeDrawingSession.h; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.h; sourceTree = "<group>"; };
 		BC4DA688185E5BAC00B1DD79 /* DDCollaborativeDrawingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCollaborativeDrawingSession.m; path = DDCollaborativeDrawing/DDCollaborativeDrawingSession.m; sourceTree = "<group>"; };
+		BC6FB40F18631C0D0082C592 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		BC6FB41118631C0D0082C592 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BC92DA5C185F56B700B0C051 /* avatar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpeg; path = DDCollaborativeDrawing/avatar.jpeg; sourceTree = "<group>"; };
 		BCBE5D2D185F181400184F81 /* DDCollaborativeDrawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDCollaborativeDrawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBE5D33185F181400184F81 /* DDCollaborativeDrawingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDCollaborativeDrawingTests-Info.plist"; sourceTree = "<group>"; };
@@ -136,6 +138,8 @@
 				BC4DA66D185E560A00B1DD79 /* XCTest.framework */,
 				D2EA307B596747599BAC1D1C /* libPods.a */,
 				8CBA4FF98E0D4015845F9C21 /* libPods-DDCollaborativeDrawingTests.a */,
+				BC6FB40F18631C0D0082C592 /* GLKit.framework */,
+				BC6FB41118631C0D0082C592 /* OpenGLES.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

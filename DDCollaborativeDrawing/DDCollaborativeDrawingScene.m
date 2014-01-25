@@ -21,50 +21,128 @@
 #import "DDCollaborativeDrawingScene.h"
 #import "DDCollaborativeDrawingSession.h"
 
-@interface DDCollaborativeDrawingScene () <DDCollaborativeDrawing>
+typedef NS_ENUM(NSInteger, DDCollaborativePathState)
+{
+  DDCollaborativePathStateNone = -1,
+  DDCollaborativePathStateBegan,
+  DDCollaborativePathStateMoved,
+  DDCollaborativePathStateEnded,
+  DDCollaborativePathStateCancelled
+};
 
+@interface DDCollaborativeDrawingScene () <DDCollaborativeDrawing>
+@property (nonatomic, strong) SKNode *backgroundNode;
+@property (nonatomic, strong) DDCollaborativeDrawingSession *session;
+@property (nonatomic, strong) SKLabelNode *browseLabel;
+@property (nonatomic, strong) NSMutableDictionary *receivedPaths;
+@property (nonatomic, getter = isDrawing) BOOL drawing;
+@property (nonatomic, strong) SKShapeNode *currentNode;
+@property (nonatomic) CGMutablePathRef currentPath;
+@property (nonatomic) DDCollaborativePathState currentPathState;
 @end
 
 @implementation DDCollaborativeDrawingScene
 
--(id)initWithSize:(CGSize)size {
-  if (self = [super initWithSize:size]) {
+-(id)initWithSize:(CGSize)size
+{
+  if (self = [super initWithSize:size])
+  {
     /* Setup your scene here */
     
-    self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+    self.backgroundColor = [SKColor whiteColor];
     
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    self.browseLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 30;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
+    self.browseLabel.text = @"Browse";
+    self.browseLabel.fontSize = 30;
+    self.browseLabel.fontColor = UIColor.blackColor;
+    self.browseLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMaxY(self.frame) - 50);
     
-    [self addChild:myLabel];
+    [self addChild:self.browseLabel];
+    
+    _receivedPaths = [NSMutableDictionary dictionary];
+    
+    _backgroundNode = [SKNode node];
+    [self addChild:_backgroundNode];
+    
+    _session = [DDCollaborativeDrawingSession sessionWithIdentifier:@"dd-sample" delegate:self userInfo:nil];
+    _session.movementResolution = DDCollaborativeMovementResolutionRealtime;
   }
   return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  
+  CGPoint touchLocation = [touches.anyObject locationInNode:self];
+  SKNode *touchedNode = [self nodeAtPoint:[touches.anyObject locationInNode:self]];
+  if(!self.isDrawing && touchedNode == self.browseLabel)
+  {
+    [self browseLabelTapped];
+  }
+  else
+  {
+    self.drawing = YES;
+    self.currentPath = CGPathCreateMutable();
+    CGPathMoveToPoint(self.currentPath, NULL, touchLocation.x, touchLocation.y);
+    CGPathAddLineToPoint(self.currentPath, NULL, touchLocation.x, touchLocation.y);
+    self.currentPathState = DDCollaborativePathStateBegan;
+    self.currentNode = SKShapeNode.node;
+    self.currentNode.path = self.currentPath;
+    self.currentNode.lineWidth = 2.f;
+    self.currentNode.strokeColor = UIColor.blackColor;
+    [self addChild:self.currentNode];
+  }
 }
 
--(void)update:(CFTimeInterval)currentTime {
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  if(!self.currentPath)
+  {
+    self.currentPath = CGPathCreateMutable();
+    self.currentNode = SKShapeNode.node;
+  }
+  self.currentPathState = DDCollaborativePathStateMoved;
+  CGPoint touchLocation = [touches.anyObject locationInNode:self];
+  CGPathAddLineToPoint(self.currentPath, NULL, touchLocation.x, touchLocation.y);
+  self.currentNode.path = self.currentPath;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  CGPoint touchLocation = [touches.anyObject locationInNode:self];
+  CGPathAddLineToPoint(self.currentPath, NULL, touchLocation.x, touchLocation.y);
+  self.currentNode.path = self.currentPath;
+  self.drawing = NO;
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  self.currentPath = NULL;
+  [self.currentNode removeFromParent];
+  self.currentNode = nil;
+  self.drawing = NO;
+}
+
+-(void)update:(CFTimeInterval)currentTime
+{
   /* Called before each frame is rendered */
 }
 
+- (void)browseLabelTapped
+{
+  if(!self.session.isBrowsing)
+  {
+    [self.session startBrowsingForPeers];
+    self.browseLabel.text = @"Browsing";
+  }
+  else
+  {
+    [self.session stopBrowsingForPeers];
+    self.browseLabel.text = @"Browse";
+  }
+}
+
 #pragma mark - DDCollaborativeDrawing
-
-- (BOOL)drawingSessionShouldBrowseForPeers:(DDCollaborativeDrawingSession *)drawingSession
-{
-  
-}
-
-- (BOOL)drawingSessionShouldAdvertisePeer:(DDCollaborativeDrawingSession *)drawingSession
-{
-  
-}
 
 - (void)drawingSession:(DDCollaborativeDrawingSession *)drawingSession didNotStartWithError:(NSError *)error
 {
@@ -73,7 +151,7 @@
 
 - (BOOL)drawingSession:(DDCollaborativeDrawingSession *)drawingSession shouldAcceptInviteFromPeer:(MCPeerID *)peer withContext:(NSData *)context
 {
-  
+  return YES;
 }
 
 - (void)drawingSession:(DDCollaborativeDrawingSession *)drawingSession peer:(MCPeerID *)peer didBeginDrawingAtPoint:(CGPoint)point
